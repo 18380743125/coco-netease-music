@@ -24,6 +24,10 @@ const routes: RouteObject[] = [
     element: <Discover />,
     children: [
       {
+        path: '',
+        element: <Navigate to="/discover/recommend" />
+      },
+      {
         path: 'recommend',
         element: <Recommend />
       },
@@ -50,7 +54,7 @@ const routes: RouteObject[] = [
     ]
   },
   {
-    path: '/mime',
+    path: '/mine',
     element: <Mime />
   },
   {
@@ -60,6 +64,10 @@ const routes: RouteObject[] = [
   {
     path: '/download',
     element: <Download />
+  },
+  {
+    path: '*',
+    element: <Navigate to="/discover/recommend" />
   }
 ]
 
